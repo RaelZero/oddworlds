@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html>
-    {% include "/head.html" %}
-    <body>
-        <div id="main">
-            {% include "/header.html" %}
-            <div id="content">
-                b{% block content %}{% endblock %}
-            </div>
-            {% include "footer.html" %}
+{% extends "base.html" %}
+
+{% block content %}
+{{ super() }}
+    {% for article in articles %}
+        {% if article.draft != "True" and article.draft != "true" %}
+        <div id="articleItem">
+            <p>{{article.title}}</p>
+            {# <p>{{article.category}}</p> #}
+            <p>{{article.date.strftime("%d %b %Y")}}</p>
         </div>
-    </body>
-</html>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
