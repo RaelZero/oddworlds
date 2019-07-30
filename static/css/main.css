@@ -1,0 +1,85 @@
+/*Global stuff*/
+
+body{
+    background-color: #333333;
+    color: #aaaaaa;
+}
+
+hr{
+    width: 30%;
+    
+    border: 2px;
+    border-style: solid;
+    border-color: #aaaaaa;
+    
+    margin: 0em;
+}
+
+#main{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+/*Header stuff*/
+
+#titlecard{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#navbar{
+    display: flex;
+    flex-direction: row;
+}
+
+#navbar > a {
+    margin-bottom: 1em;
+    margin-right: 1em;
+    margin-top: 0em;
+    
+    font-family: monospace;
+    font-style: italic;
+    color: inherit;
+}
+
+
+/*Content stuff*/
+#content{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+
+
+/*Footer stuff*/
+
+#bottombar{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    justify-content: left;
+}
+
+#bottombar > *{
+    margin-right: 2em;
+}
+
+#license{
+    font-family: sans-serif;
+    
+    font-weight: bold;
+    color: inherit;
+    text-decoration: none;
+}
+
+#icon{
+    width: 32px;
+    height: 32px;
+    
+}
