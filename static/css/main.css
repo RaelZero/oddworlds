@@ -3,6 +3,7 @@
 body{
     background-color: #333333;
     color: #aaaaaa;
+    font-family: sans-serif;
 }
 
 hr{
@@ -55,9 +56,19 @@ hr{
 }
 
 #articleItem{
-    display:flex;
-    flex-direction:row;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+
+    margin: auto;
+}
+
+#articleTitle{
+    color: #cccccc;
+}
+
+#articleTitle:visited{
+    color: #888888;
 }
 
 
@@ -68,7 +79,7 @@ hr{
     flex-direction: row;
 
     align-items: center;
-    justify-content: left;
+    justify-content: space-between;
 }
 
 #bottombar > *{
