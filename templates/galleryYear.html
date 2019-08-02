@@ -12,12 +12,23 @@
         {# TODO: reverse order #}
         {# TODO: get rid of empty space #}
         {% for a in articles %}
-            {% if a.category == "theObservatory" and a.date.year <= 2015 %}
-                <div>
-                    <a href="{{ a.url }}">
-                        <img src="{{ basePath + a.image }}" id="galleryPreview">
-                    </a>
-                </div>
+            {% if page.date.year == 2015 %}
+                {% if a.category == "theObservatory" and a.date.year <= page.date.year %}
+                    <div>
+                        <a href="{{ a.url }}">
+                            <img src="{{ basePath + a.image }}" id="galleryPreview">
+                        </a>
+                    </div>
+                {% endif %}
+
+            {% else %}
+                {% if a.category == "theObservatory" and a.date.year == page.date.year %}
+                    <div>
+                        <a href="{{ a.url }}">
+                            <img src="{{ basePath + a.image }}" id="galleryPreview">
+                        </a>
+                    </div>
+                {% endif %}
             {% endif %}
         {% endfor %}
     </div>

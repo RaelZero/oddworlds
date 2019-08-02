@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% set basePath = "https://static.oddworlds.org/gallery/" %}
+
+{% block content %}
+{{ super() }}
+    <div id="galleryYearList">
+        {% for p in pages %}
+        {% if p.template == "galleryYear" %}
+        <div id="galleryYearPreview">
+            <p id="galleryYearTitle">{{ p.title }}</p>
+
+            <a href="{{ p.url }}">
+                <img src="{{ basePath + p.image }}" id="galleryPreview">
+            </a>
+
+            <p>{{ p.content }}</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}

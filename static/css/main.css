@@ -25,6 +25,17 @@ hr{
     flex-direction: column;
 }
 
+ul{
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li:before{
+  content: "-";
+  padding-right: .5em;
+}
+
 /* Header stuff */
 
 #titleCard > a{
@@ -101,15 +112,18 @@ hr{
     flex-wrap: wrap;
 }
 
+#galleryYearList{
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+}
+
 #galleryFullImage{
     width: 30%;
 
     min-width: 300px;
     min-height: 300px;
-}
-
-#galleryFeaturedImage{
-    width: 300px;
 }
 
 #galleryYearTitle{
@@ -119,6 +133,14 @@ hr{
     font-weight: bolder;
 
     margin-bottom: 1em;
+}
+
+#galleryYearPreview{
+    margin: 1em;
+}
+
+#galleryYearPreview *{
+    width: 300px;
 }
 
 #galleryPreview{
