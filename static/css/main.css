@@ -25,12 +25,14 @@ hr{
     flex-direction: column;
 }
 
-/*Header stuff*/
+/* Header stuff */
 
-#titlecard{
+#titleCard > a{
+    color: #cccccc;
     font-family: sans-serif;
     font-weight: bold;
     font-size: larger;
+    text-decoration: none;
 }
 
 #navbar{
@@ -59,16 +61,34 @@ hr{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
-    margin: auto;
 }
 
-#articleTitle{
+#articleTitleList{
     color: #cccccc;
 }
 
-#articleTitle:visited{
+#articleTitleList:visited{
     color: #888888;
+}
+
+#articleTitlePage{
+    color: #cccccc;
+    font-size: 150%;
+    font-family: monospace;
+    font-weight: bolder;
+
+    margin-top: 0em;
+}
+
+#articleContent{
+    width: 60%;
+}
+
+#articleTags{
+    font-size: smaller;
+    font-family: monospace;
+
+    margin-top: 3em;
 }
 
 
@@ -80,10 +100,8 @@ hr{
 
     align-items: center;
     justify-content: space-between;
-}
 
-#bottombar > *{
-    margin-right: 2em;
+    margin-top: .5em;
 }
 
 #license{
@@ -92,6 +110,12 @@ hr{
     font-weight: bold;
     color: inherit;
     text-decoration: none;
+}
+
+img#icon{
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
 }
 
 #icon{
