@@ -92,6 +92,42 @@ hr{
 }
 
 
+/* Gallery stuff */
+
+#galleryExpose{
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+}
+
+#galleryFullImage{
+    width: 30%;
+
+    min-width: 300px;
+    min-height: 300px;
+}
+
+#galleryFeaturedImage{
+    width: 300px;
+}
+
+#galleryYearTitle{
+    color: #cccccc;
+    font-size: 150%;
+    font-family: monospace;
+    font-weight: bolder;
+
+    margin-bottom: 1em;
+}
+
+#galleryPreview{
+    width: 300px;
+
+    margin: 1em;
+}
+
+
 /*Footer stuff*/
 
 #bottombar{

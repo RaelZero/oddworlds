@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% set imagePath = "https://static.oddworlds.org/gallery/" + article.image %}
+
+{% block content %}
+{{ super() }}
+    <a href={{ imagePath }}><img id="galleryFullImage" src="{{ imagePath }}"></a>
+
+    <div id="galleryContent">{{ article.content }}</div>
+{% endblock %}

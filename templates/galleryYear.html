@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% set basePath = "https://static.oddworlds.org/gallery/" %}
+
+{% block content %}
+{{ super() }}
+    <div id="galleryYearTitle">
+        {{ page.title }}
+    </div>
+
+    <div id="galleryExpose">
+        {# TODO: reverse order #}
+        {# TODO: get rid of empty space #}
+        {% for a in articles %}
+            {% if a.category == "theObservatory" and a.date.year <= 2015 %}
+                <div>
+                    <a href="{{ a.url }}">
+                        <img src="{{ basePath + a.image }}" id="galleryPreview">
+                    </a>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+{% endblock %}
