@@ -5,7 +5,8 @@
     {% for article in articles %}
         {% if article.draft != "True" and article.draft != "true" and article.category != "theObservatory" %}
         <div id="articleItem">
-            <p><a id="articleTitleList" href="{{article.slug}}.html">{{article.title}}</a></p>
+            <div><p id="articleTitleList"><a href="{{article.slug}}.html">{{article.title}}</a></p>
+            <p id="articleTags">#{{ article.category }}</p></div>
             <p>{{article.date.strftime("%d %b %Y")}}</p>
         </div>
         {% endif %}
