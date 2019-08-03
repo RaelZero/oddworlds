@@ -26,20 +26,28 @@ hr{
 }
 
 ul{
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 li:before{
-  content: "-";
-  padding-right: .5em;
+    content: "-";
+    padding-right: .5em;
+}
+
+a{
+    color: #cccccc;
+
+}
+
+a:visited{
+    color: #888888;
 }
 
 /* Header stuff */
 
 #titleCard > a{
-    color: #cccccc;
     font-family: sans-serif;
     font-weight: bold;
     font-size: larger;
@@ -72,14 +80,6 @@ li:before{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-#articleTitleList{
-    color: #cccccc;
-}
-
-#articleTitleList:visited{
-    color: #888888;
 }
 
 #articleTitlePage{
