@@ -3,6 +3,6 @@
 {% block content %}
 {{ super() }}
     <div><p id="articleTitlePage">{{ article.title }}</p></div>
+    <div><p id="articleTags">#{{ article.category }}</p></div>
     <div id="articleContent">{{ article.content }}</div>
-    <div><p id="articleTags">category: {{ article.category }}</p></div>
 {% endblock %}
