@@ -9,8 +9,8 @@
     </div>
 
     <div id="galleryExpose">
-        {# TODO: reverse order #}
         {# TODO: get rid of empty space #}
+        {# TODO: get articles in order #}
         {% for a in articles %}
             {% if page.date.year == 2015 %}
                 {% if a.category == "theObservatory" and a.date.year <= page.date.year %}
