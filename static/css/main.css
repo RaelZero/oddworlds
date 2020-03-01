@@ -46,7 +46,7 @@ a:visited{
 
 /* Header stuff */
 #titleCard > a{
-    color: #ccc; 
+    color: #ccc;
     font-family: sans-serif;
     font-weight: bold;
     font-size: larger;
@@ -154,7 +154,7 @@ a:visited{
 
 
 /*Footer stuff*/
-#bottombar{
+footer{
     display: flex;
     flex-direction: row;
 
