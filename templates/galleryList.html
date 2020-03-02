@@ -5,16 +5,16 @@
 {% block content %}
 {{ super() }}
     <div id="galleryYearList">
-        {% for p in pages %}
-        {% if p.template == "galleryYear" %}
+        {% for a in articles %}
+        {% if a.template == "galleryYear" %}
         <div id="galleryYearPreview">
-            <p id="galleryYearTitle">{{ p.title }}</p>
+            <p id="galleryYearTitle">{{ a.title }}</p>
 
-            <a href="{{ p.url }}">
-                <img src="{{ basePath + p.image }}" id="galleryPreview">
+            <a href="{{ a.url }}">
+                <img src="{{ basePath + a.image }}" id="galleryPreview">
             </a>
 
-            <p>{{ p.content }}</p>
+            <p>{{ a.content }}</p>
         </div>
         {% endif %}
         {% endfor %}

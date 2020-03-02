@@ -5,15 +5,15 @@
 {% block content %}
 {{ super() }}
     <div id="galleryYearTitle">
-        {{ page.title }}
+        {{ article.title }}
     </div>
 
     <div id="galleryExpose">
         {# TODO: get rid of empty space #}
         {# TODO: get articles in order #}
         {% for a in articles %}
-            {% if page.date.year == 2015 %}
-                {% if a.category == "theObservatory" and a.date.year <= page.date.year %}
+            {% if article.date.year == 2015 %}
+                {% if a.category == "theObservatory" and a.date.year <= article.date.year %}
                     <div>
                         <a href="{{ a.url }}">
                             <img src="{{ basePath + a.image }}" id="galleryPreview">
@@ -22,7 +22,7 @@
                 {% endif %}
 
             {% else %}
-                {% if a.category == "theObservatory" and a.date.year == page.date.year %}
+                {% if a.category == "theObservatory" and a.date.year == article.date.year %}
                     <div>
                         <a href="{{ a.url }}">
                             <img src="{{ basePath + a.image }}" id="galleryPreview">
