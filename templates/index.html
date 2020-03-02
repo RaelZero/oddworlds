@@ -3,10 +3,10 @@
 {% block content %}
 {{ super() }}
     {% for article in articles %}
-        {% if article.draft != "True" and article.draft != "true" and article.category != "theObservatory" %}
+        {% if article.draft != "True" and article.draft != "true" and article.category == "unpublishables" %}
         <div id="articleItem">
             <div><p id="articleTitleList"><a href="{{article.slug}}.html">{{article.title}}</a></p>
-            <p id="articleTags">#{{ article.category }}</p></div>
+            <p id="articleTags">#{{ article.tags[0] }}</p></div>
             <p>{{article.date.strftime("%d %b %Y")}}</p>
         </div>
         {% endif %}
