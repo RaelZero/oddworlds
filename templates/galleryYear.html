@@ -13,7 +13,7 @@
         {# TODO: get articles in order #}
         {% for a in articles %}
             {% if article.date.year == 2015 %}
-                {% if a.category == "gallery" and a.date.year <= article.date.year %}
+                {% if a.category == "gallery" and a.date.year <= article.date.year and a.template == "galleryItem" %}
                     <div>
                         <a href="{{ a.slug }}.html">
                             <img src="{{ basePath + a.image }}" id="galleryPreview">
@@ -22,7 +22,7 @@
                 {% endif %}
 
             {% else %}
-                {% if a.category == "gallery" and a.date.year == article.date.year %}
+                {% if a.category == "gallery" and a.date.year == article.date.year and a.template == "galleryItem" %}
                     <div>
                         <a href="{{ a.slug }}.html">
                             <img src="{{ basePath + a.image }}" id="galleryPreview">
