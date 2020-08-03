@@ -2,13 +2,11 @@
 <html lang="en">
     {% include "head.html" %}
     <body>
-        <div id="main">
-            {% include "header.html" %}
-            <div id="content">
-                {% block content %}
-                {% endblock %}
-            </div>
-            {% include "footer.html" %}
-        </div>
+        {% include "header.html" %}
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+        {% include "footer.html" %}
     </body>
 </html>

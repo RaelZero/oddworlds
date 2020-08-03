@@ -5,8 +5,10 @@
     {% for article in articles %}
         {% if article.status != "draft" and article.category == "thoughts" %}
         <div id="articleItem">
-            <div><p id="articleTitleList"><a href="thoughts/{{article.slug}}.html">{{article.title}}</a></p>
-            <p id="articleTags">#{{ article.tags[0] }}</p></div>
+            <div>
+                <p id="articleTitleList"><a href="thoughts/{{article.slug}}.html">{{article.title}}</a></p>
+                <p id="articleTags">#{{ article.tags[0] }}</p>
+            </div>
             <p>{{article.date.strftime("%d %b %Y")}}</p>
         </div>
         {% endif %}
