@@ -66,9 +66,9 @@ ul#linkbar{
 }
 
 ul#linkbar > li{
+    margin-top: .5em;
     margin-bottom: .5em;
     margin-right: 1em;
-    margin-top: .5em;
 
     font-family: monospace;
     font-style: italic;
