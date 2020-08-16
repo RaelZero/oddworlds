@@ -25,14 +25,9 @@ body{
 }
 
 ul{
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-}
-
-li:before{
-    content: "-";
-    padding-right: .5em;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 a{
@@ -65,16 +60,20 @@ nav{
     flex-direction: row;
 }
 
-nav > a{
-    margin-bottom: 1em;
+ul#linkbar{
+    display: flex;
+    padding-bottom: .5em;
+}
+
+ul#linkbar > li{
+    margin-bottom: .5em;
     margin-right: 1em;
-    margin-top: 0em;
+    margin-top: .5em;
 
     font-family: monospace;
     font-style: italic;
     color: inherit;
 }
-
 
 /*Content stuff*/
 main{
