@@ -91,7 +91,7 @@ main{
     margin-bottom: 0em;
 }
 
-#articleTitlePage{
+h2{
     color: #ccc;
     font-size: 150%;
     font-family: monospace;
@@ -101,18 +101,19 @@ main{
     margin-bottom: 0em;
 }
 
-#articleContent{
-    width: 60%;
-}
-
-#articleTags{
+h3, p#articleTags{
     font-size: smaller;
     font-family: monospace;
 
     margin-top: 0em;
     margin-bottom: 1em;
+
+    font-weight: normal;
 }
 
+article > p{
+    width: 60%;
+}
 
 /* Gallery stuff */
 #galleryExpose{
