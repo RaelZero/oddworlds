@@ -2,7 +2,7 @@
 
 {% block content %}
 {{ super() }}
-<ul>
+    <ul>
     {% for article in articles %}
         {% if article.status != "draft" and article.category == "thoughts" %}
         <li id="articleItem">
@@ -14,5 +14,6 @@
         </li>
         {% endif %}
     {% endfor %}
-</ul>
+    </ul>
+
 {% endblock %}
