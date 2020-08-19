@@ -5,7 +5,13 @@
 
 {% block content %}
 {{ super() }}
-    <a href={{ galleryPath }}><img id="galleryFullImage" src="{{ previewPath }}"></a>
+    <figure>
+        <a href={{ galleryPath }}>
+            <img id="galleryFullImage" src="{{ previewPath }}">
+        </a>
 
-    <div id="galleryContent">{{ article.content }}</div>
+        <figcaption id="galleryContent">
+            {{ article.content }}
+        </figcaption>
+    </figure>
 {% endblock %}

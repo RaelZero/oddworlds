@@ -3,6 +3,10 @@ body{
     background-color: #333;
     color: #aaa;
     font-family: sans-serif;
+
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 hr{
@@ -13,15 +17,6 @@ hr{
     border-color: #aaa;
 
     margin: 0em;
-}
-
-body{
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-
-    display: flex;
-    flex-direction: column;
 }
 
 ul{
@@ -37,7 +32,6 @@ a{
 a:visited{
     color: #888;
 }
-
 
 /* Header stuff */
 h1{
@@ -55,13 +49,10 @@ h1 > a:visited{
     color: #ccc;
 }
 
-nav{
-    display: flex;
-    flex-direction: row;
-}
-
 ul#linkbar{
     display: flex;
+    flex-flow: row wrap;
+
     padding-bottom: .5em;
 }
 
@@ -76,11 +67,6 @@ ul#linkbar > li{
 }
 
 /*Content stuff*/
-main{
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
-
 #articleItem{
     display: flex;
     flex-direction: row;
@@ -97,7 +83,6 @@ h2{
     font-family: monospace;
     font-weight: bolder;
 
-    margin-top: 0em;
     margin-bottom: 0em;
 }
 
@@ -118,47 +103,30 @@ article > p{
 /* Gallery stuff */
 #galleryExpose{
     display: flex;
-    flex-direction: row;
-
-    flex-wrap: wrap;
-}
-
-#galleryYearList{
-    display: flex;
-    flex-direction: row;
-
-    flex-wrap: wrap;
-}
-
-#galleryFullImage{
-    width: 30%;
-
-    min-width: 300px;
-}
-
-#galleryYearTitle{
-    color: #ccc;
-    font-size: 150%;
-    font-family: monospace;
-    font-weight: bolder;
-
-    margin-bottom: 1em;
+    flex-flow: row wrap;
 }
 
 #galleryYearPreview{
-    margin: 1em;
-}
-
-#galleryYearPreview *{
-    width: 300px;
-}
-
-#galleryPreview{
     width: 300px;
 
-    margin: .5em;
+    margin: 0em;
+    margin-right: 1em;
 }
 
+img#galleryPreview{
+    width: 300px;
+    margin-right: 1em;
+}
+
+img#galleryFullImage{
+    width: 30%;
+    min-width: 128px;
+}
+
+figure{
+    margin: 0em;
+    margin-top: 1em;
+}
 
 /*Footer stuff*/
 footer{
@@ -183,9 +151,4 @@ img#icon{
     width: 32px;
     height: 32px;
     border-radius: 4px;
-}
-
-#icon{
-    width: 32px;
-    height: 32px;
 }

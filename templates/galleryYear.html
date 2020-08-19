@@ -5,33 +5,33 @@
 
 {% block content %}
 {{ super() }}
-    <div id="galleryYearTitle">
-        {{ article.title }}
-    </div>
+    <h2>{{ article.title }}</h2>
 
-    <div id="galleryExpose">
-        {# TODO: get rid of empty space #}
-        {# TODO: get articles in order #}
+    <ul id="galleryExpose">
         {% for a in articles %}
-            {% if article.date.year == 2015 %}
-                {% if a.category == "gallery" and a.date.year <= article.date.year and a.template == "galleryItem" %}
-                    <div>
-                        <a href="{{ a.slug }}.html">
-                            <img src="{{ previewPath + a.image }}" id="galleryPreview">
-                        </a>
-                    </div>
-                {% endif %}
+        {% if article.date.year == 2015 %}
+        {% if a.category == "gallery" and a.date.year <= article.date.year and a.template == "galleryItem" %}
+        <li>
+            <figure>
+            <a href="{{ a.slug }}.html">
+                <img src="{{ previewPath + a.image }}" id="galleryPreview">
+            </a>
+            </figure>
+        </li>
+        {% endif %}
 
-            {% else %}
-                {% if a.category == "gallery" and a.date.year == article.date.year and a.template == "galleryItem" %}
-                    <div>
-                        <a href="{{ a.slug }}.html">
-                            <img src="{{ previewPath + a.image }}" id="galleryPreview">
-                        </a>
-                    </div>
-                {% endif %}
-            {% endif %}
+        {% else %}
+        {% if a.category == "gallery" and a.date.year == article.date.year and a.template == "galleryItem" %}
+        <li>
+            <figure>
+            <a href="{{ a.slug }}.html">
+                <img src="{{ previewPath + a.image }}" id="galleryPreview">
+            </a>
+            </figure>
+        </li>
+        {% endif %}
+        {% endif %}
         {% endfor %}
-    </div>
+    </ul>
 
 {% endblock %}

@@ -5,19 +5,23 @@
 
 {% block content %}
 {{ super() }}
-    <div id="galleryYearList">
+    <ul id="galleryExpose">
         {% for a in articles %}
         {% if a.template == "galleryYear" %}
-        <div id="galleryYearPreview">
-            <p id="galleryYearTitle">{{ a.title }}</p>
+        <li id="galleryYearPreview">
+            <h2>{{ a.title }}</h2>
+            
+            <figure>
+                <a href="{{ a.slug }}.html">
+                    <img src="{{ previewPath + a.image }}" id="galleryPreview">
+                </a>
 
-            <a href="{{ a.slug }}.html">
-                <img src="{{ previewPath + a.image }}" id="galleryPreview">
-            </a>
-
-            <p>{{ a.content }}</p>
-        </div>
+                <figcaption>
+                    {{ a.content }}
+                </figcaption>
+            </figure>
+        </li>
         {% endif %}
         {% endfor %}
-    </div>
+    </ul>
 {% endblock %}
