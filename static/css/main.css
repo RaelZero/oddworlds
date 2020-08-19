@@ -129,7 +129,7 @@ figure{
 }
 
 /*Footer stuff*/
-footer{
+footer > div{
     display: flex;
     flex-direction: row;
 
