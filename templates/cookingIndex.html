@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+{{ super() }}
+    {{ page.content }}
+    {% for article in articles|sort(attribute='slug') %}
+        {% if article.status != "draft" and article.category == "cooking" %}
+
+        <li id="articleItem">
+            <div>
+                <p id="articleTitleList"><a href="{{ article.slug }}.html">{{ article.title }}</a></p>
+                <p id="articleSummary">{{ article.summary[3:-4] }}</p> 
+            </div>
+        </li>
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}
+
+{# note: the summary would normally be parsed as <p> elements. The [3:-4] removes the p tags from the summary. Ugly ugly hax. #}

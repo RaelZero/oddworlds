@@ -24,6 +24,12 @@ hr{
 
 ul{
     list-style-type: none;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+ul#plainlist, ul#linkbar, ul#galleryExpose{
+    list-style-type: none;
     padding: 0;
     margin: 0;
 }
@@ -89,7 +95,7 @@ h2{
     margin-bottom: 0em;
 }
 
-h3, p#articleTags{
+h3, #articleSummary, #articleTags{
     font-size: smaller;
     font-family: monospace;
 
@@ -99,7 +105,7 @@ h3, p#articleTags{
     font-weight: normal;
 }
 
-article > p{
+article > *{
     width: 60%;
 }
 

@@ -2,7 +2,7 @@
 
 {% block content %}
 {{ super() }}
-    <ul>
+    <ul id="plainlist">
     {% for article in articles %}
         {% if article.status != "draft" and article.category == "thoughts" %}
         <li id="articleItem">
